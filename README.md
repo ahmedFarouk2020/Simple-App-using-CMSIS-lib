@@ -1,2 +1,3 @@
-# Simple-App-using-CMSIS-lib
-Simple 
+# Simple-Apps-using-CMSIS-lib
+* Blinking leds using delay function
+* Blinking leds using PWM
