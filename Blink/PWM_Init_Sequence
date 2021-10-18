@@ -1,0 +1,17 @@
++ TIM Output Compare/PWM Initialization
++ TIM Output Compare/PWM Channel Configuration
++ TIM Output Compare/PWM  Start
+
+PWM generation : HAL_TIM_PWM_MspInit() --done
+Enable the TIM interface clock using __HAL_RCC_TIMx_CLK_ENABLE(); --done
+(##) TIM pins configuration
+            (+++) Enable the clock for the TIM GPIOs using the following function:
+             __HAL_RCC_GPIOx_CLK_ENABLE(); --done
+            (+++) Configure these TIM pins in Alternate function mode using HAL_GPIO_Init(); --done
+(#) Configure the TIM in the desired functioning mode using one of the Initialization 
+function of this driver:
+	(++) HAL_TIM_PWM_Init and HAL_TIM_PWM_ConfigChannel: to use the Timer to generate a
+				PWM signal.			
+(#) Activate the TIM peripheral using one of the start functions depending on the feature used:
+	(++) PWM generation : HAL_TIM_PWM_Start(), HAL_TIM_PWM_Start_DMA(), HAL_TIM_PWM_Start_IT()
+	
